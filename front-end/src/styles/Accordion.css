@@ -1,0 +1,184 @@
+#housingAccordion-section {
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+    margin: auto;
+}
+
+.accordion-container {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion-container .accordion {
+    background: #FF6060;
+    border-radius: 5px;
+    display: flex;
+    font-size: 24px;
+    color: white;
+    z-index: 2;
+}
+
+.accordion div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 10px;
+}
+
+.accordion-container .accordion-about {
+    width: 1023px;
+    height: 47px;
+}
+
+.accordion-container .accordion-housing {
+    width: 582px;
+    height: 52px;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.accordion img {
+    transition: 0.3s;
+}
+
+.accordion img.active {
+    transform: rotate(180deg);
+}
+
+.accordion-container .about-description,
+.housing-description {
+    width: 582px;
+    padding: 0;
+    margin: 0;
+    color: #FF6060;
+    border-radius: 0px 0px 5px 5px;
+    background: #F7F7F7;
+    padding-top: 10px;
+    position: relative;
+    bottom: 5px;
+    z-index: 1;
+    height: 0;
+    opacity: 0;
+    transition: all 600ms ease-in-out;
+}
+
+.accordion-container .about-description {
+    width: 1023px;
+}
+
+.accordion-container .about-description.active {
+    padding: 20px 0;
+    height: 180px;
+    opacity: 1;
+}
+
+.accordion-container .housing-description.active {
+    padding: 20px 0;
+    height: 300px;
+    opacity: 1;
+}
+
+.accordion-container .about-description p,
+.housing-description p {
+    margin: 0 10px;
+    font-size: 24px;
+    opacity: 0;
+    transition: all 600ms ease-in-out;
+}
+
+.accordion-container .about-description p.active,
+.housing-description p {
+    opacity: 1;
+}
+
+.accordion-container .housing-description .equipments {
+    margin-bottom: 8px;
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .accordion-container {
+        width: 90%;
+    }
+
+    .housing-description {
+        height: 0;
+    }
+
+    .accordion-container .housing-description.active {
+        height: 230px;
+    }
+
+    .accordion-container .accordion-about {
+        width: 100%;
+    }
+
+    .accordion-container .about-description {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .accordion-container {
+        width: 335px;
+    }
+
+    .accordion-container .accordion-about {
+        width: 335px;
+        height: 30px;
+    }
+
+    .accordion-container .about-description {
+        width: 335px;
+    }
+
+    .title {
+        font-size: 13px;
+    }
+
+    .accordion-container .about-description {
+        bottom: 10px;
+    }
+
+    #housingAccordion-section {
+        width: 335px;
+        flex-direction: column;
+    }
+
+    .accordion-container {
+        margin: 10px auto;
+    }
+
+    .accordion-container .accordion-housing {
+        width: 335px;
+        height: 29.93px;
+    }
+
+    .accordion-container .housing-description {
+        width: 335px;
+        height: 0;
+    }
+
+    .accordion-container .housing-description.active {
+        height: 230px;
+    }
+
+    .accordion-container .about-description.active {
+        height: 160px;
+    }
+
+    .accordion-container .about-description p,
+    .housing-description p {
+        font-size: 12px;
+    }
+
+    .accordion img {
+        width: 8.98px;
+    }
+}

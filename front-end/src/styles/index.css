@@ -1,0 +1,16 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 142.6%;
+}
+
+.fa-spinner {
+    font-size: 100px;
+    color: #FF6060;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

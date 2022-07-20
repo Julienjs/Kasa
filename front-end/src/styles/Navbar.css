@@ -1,0 +1,52 @@
+header {
+    width: 1240px;
+    height: 68px;
+    display: flex;
+    margin: 40px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    width: 309px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    color: #FF6060;
+    list-style: none;
+    font-size: 24px;
+}
+
+.active-link {
+    text-decoration: underline;
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+    header {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    header {
+        width: 335px;
+        margin: 20px auto;
+    }
+
+    header img {
+        width: 145px;
+        height: 47px;
+    }
+
+    header nav {
+        width: 140px;
+    }
+
+    nav ul {
+        font-size: 12px;
+        padding: 0;
+        text-transform: uppercase;
+    }
+}
