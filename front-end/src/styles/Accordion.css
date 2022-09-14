@@ -64,9 +64,9 @@
     position: relative;
     bottom: 5px;
     z-index: 1;
-    height: 0;
-    opacity: 0;
-    transition: all 600ms ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
 }
 
 .accordion-container .about-description {
@@ -75,26 +75,24 @@
 
 .accordion-container .about-description.active {
     padding: 20px 0;
-    height: 180px;
-    opacity: 1;
+    max-height: 100vh;
 }
 
 .accordion-container .housing-description.active {
     padding: 20px 0;
-    height: 300px;
-    opacity: 1;
+    max-height: 100vh;
 }
 
 .accordion-container .about-description p,
 .housing-description p {
     margin: 0 10px;
     font-size: 24px;
+    transition: opacity 0.2s;
 }
 
 .accordion-container .about-description p.active,
 .housing-description p {
     opacity: 1;
-
 }
 
 .accordion-container .housing-description .equipments {
@@ -105,7 +103,6 @@
     .accordion-container {
         width: 90%;
     }
-
 
     #housingAccordion-section {
         height: auto;
@@ -158,16 +155,8 @@
 
     .accordion-container .housing-description {
         width: 335px;
-        height: 0;
     }
 
-    .accordion-container .housing-description.active {
-        height: 230px;
-    }
-
-    .accordion-container .about-description.active {
-        height: 160px;
-    }
 
     .accordion-container .about-description p,
     .housing-description p {
