@@ -89,13 +89,12 @@
 .housing-description p {
     margin: 0 10px;
     font-size: 24px;
-    opacity: 0;
-    transition: all 600ms ease-in-out;
 }
 
 .accordion-container .about-description p.active,
 .housing-description p {
     opacity: 1;
+
 }
 
 .accordion-container .housing-description .equipments {
@@ -107,12 +106,9 @@
         width: 90%;
     }
 
-    .housing-description {
-        height: 0;
-    }
 
-    .accordion-container .housing-description.active {
-        height: 230px;
+    #housingAccordion-section {
+        height: auto;
     }
 
     .accordion-container .accordion-about {

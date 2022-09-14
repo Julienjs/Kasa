@@ -1,19 +1,22 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Card = ({ data }) => {
+    const navigate = useNavigate()
+
+    const handleLink = (id) => {
+        navigate(`/housing/${id}`)
+    }
+
     return (
         <section id='card'>
             {data &&
                 data.map((data, index) => (
-
-                    <NavLink key={`${data}-${index}`} to={`/housing/${data.id}`} style={{ textDecoration: 'none', color: '#FF6060' }}>
-                        <article >
-                            <div></div>
-                            <img src={data.cover} alt="cover" />
-                            <p >{data.title}</p>
-                        </article>
-                    </NavLink>
+                    <article key={`${data}-${index}`} onClick={() => handleLink(data.id)}>
+                        <div></div>
+                        <img src={data.cover} alt="cover" />
+                        <p >{data.title}</p>
+                    </article>
                 ))
             }
         </section>
