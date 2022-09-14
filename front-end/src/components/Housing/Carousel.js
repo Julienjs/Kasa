@@ -29,14 +29,16 @@ const Carousel = (props) => {
         <section id='section-carousel'>
             <div className='carousel-container'>
                 <img src={props.pictures[index]} alt="pictures" className='carousel-pictures' />
-                <div className='carousel-action'>
-                    <button onClick={prev}>
-                        <img src={VectorLeft} alt="Vector Left" />
-                    </button>
-                    <button onClick={next}>
-                        <img src={VectorRight} alt="Vector Right" />
-                    </button>
-                </div>
+                {props.pictures.length > 1 &&
+                    <div className='carousel-action'>
+                        <button onClick={prev}>
+                            <img src={VectorLeft} alt="Vector Left" />
+                        </button>
+                        <button onClick={next}>
+                            <img src={VectorRight} alt="Vector Right" />
+                        </button>
+                    </div>
+                }
                 <p className='carousel-status'>{index + 1}/{props.pictures.length}</p>
             </div>
         </section>
