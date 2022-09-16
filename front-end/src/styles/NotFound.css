@@ -33,3 +33,38 @@
     font-size: 18px;
     text-align: center;
 }
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .error-message {
+        width: auto;
+    }
+
+    .error-message p {
+        font-size: 30px;
+    }
+
+    .link {
+        margin: auto;
+        width: auto;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .error-message {
+        width: auto;
+    }
+
+    .error-message h1 {
+        font-size: 180px;
+    }
+
+    .error-message p {
+        font-size: 14px;
+    }
+
+    .link {
+        margin: auto;
+        width: auto;
+    }
+
+}
